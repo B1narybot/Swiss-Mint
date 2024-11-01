@@ -1,0 +1,98 @@
+.Nv-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between header and nav links */
+    padding: 40px;
+    background-color: #000401;
+}
+
+.Nv-header {
+    color: #898988;
+    transition: all 0.3s ease; 
+    cursor: pointer;
+}
+
+.Nv-header:hover { /* Corrected the hover selector */
+    color: #898988;
+    text-decoration: underline; 
+    transform: scale(1.06); 
+    text-underline-offset: 3px; 
+}
+
+.Nv-links {
+    display: flex;
+    justify-content: flex-end; 
+    align-content: flex-start;
+    gap: 80px; 
+    align-items: center; /* Center items vertically */
+    list-style: none;
+    width: 100%; 
+    padding-right: 230px; 
+    color: #898988;
+}
+
+.Nv-links li {
+    font-size: 20px;
+    transition: all 0.3s ease; 
+    cursor: pointer;
+}
+
+.Nv-links li:hover {
+    color: #898988; 
+    text-decoration: underline; 
+    transform: scale(1.06); 
+    text-underline-offset: 3px; 
+}
+
+.nav-right {
+    display: flex; /* Align cart and hamburger inline */
+    align-items: center; /* Center items vertically */
+}
+
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px; /* Add space between cart and hamburger */
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #898988; /* Color of hamburger lines */
+    margin: 3px 0; /* Space between lines */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Show links when the menu is active */
+.show {
+    display: block; /* Show dropdown */
+}
+
+/* Media queries for mobile and small tablets */
+@media (max-width: 768px) {
+    .Nv-links {
+        display: none; /* Ensure links are hidden by default */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+
+    .Nv-links.show {
+        display: block; /* Show dropdown when active */
+    }
+}
+
+@media (min-width: 769px) {
+    .Nv-links {
+        display: flex; /* Show links in a row for larger screens */
+        position: static; /* Make it part of the flow */
+        background-color: transparent; /* Remove dropdown background */
+        box-shadow: none; /* Remove shadow for large screens */
+    }
+
+    .Nv-links li {
+        padding: 10px 15px; /* Adjust padding for larger screens */
+    }
+}
