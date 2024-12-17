@@ -1,55 +1,107 @@
 .carousel-container {
-    /* position: relative; */
-    width: 100%;
-    /* max-width: 600px; */
-    margin: 0 auto;
-    overflow: hidden;
-    height: 400px;
-  }
-  
-  .carousel {
-    position: relative;
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-slide {
-    min-width: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .carousel-slide.active {
-    opacity: 1; /* Show only the active slide */
-    position: relative; /* Make the active slide relative so it's visible */
-  }
-  
-  img {
-    width: 100%;
-    height: 400px;
-    object-fit: fill;
-  }
-  
-  button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  display: none; 
+  position: relative;
+  width: 100%;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-container .carousel-slide img {
+  width: 100%;
+  height: 500px;
+}
+
+.carousel-container .carousel-content {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+
+}
+
+.carousel-container .carousel-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.carousel-container .carousel-content p {
+  font-size: 1rem;
+  margin: 0 0 15px;
+}
+
+.carousel-container .carousel-content button {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-container .carousel-content button:hover {
+  background-color: #ddd;
+}
+
+.carousel-container .dot-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  bottom: 15px;
+}
+
+.carousel-container .dot-container .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-container .dot-container .dot.active {
+  opacity: 1;
+}
+
+.carousel-container .prev, .carousel-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-container .prev {
+  left: 10px;
+}
+
+.carousel-container .next {
+  right: 10px;
+}

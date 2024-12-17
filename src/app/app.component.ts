@@ -12,23 +12,34 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'SwissMint';
-
-  // Array to store the image URLs for the carousel
+  
   slides = [
-    'assets/homepage/street-wear.jpg',
-    'assets/homepage/high-end-cothing-brand.jpg',  
-    'assets/homepage/urban-wear.jpg'
+    {
+      image: 'assets/homepage/street-wear.jpg',
+      heading2: 'Street Wear Collection',
+      heading3: 'Explore the trendiest street fashion.',
+      paragraph: 'Get the latest designs and styles to stand out in the streetwear scene.'
+    },
+    {
+      image: 'assets/homepage/high-end-cothing-brand.jpg',
+      heading2: 'High-End Fashion',
+      heading3: 'Luxury and elegance combined.',
+      paragraph: 'Discover high-end collections from renowned designers.'
+    },
+    {
+      image: 'assets/homepage/urban-wear.jpg',
+      heading2: 'Urban Wear',
+      heading3: 'Style with comfort.',
+      paragraph: 'Urban wear brings together comfort and style for everyday use.'
+    }
   ];
-
-  // The current index of the slide being displayed
+  
   currentIndex = 0;
 
-  // Method to move to the next slide
   nextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
   }
 
-  // Method to move to the previous slide
   prevSlide(): void {
     this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
   }
