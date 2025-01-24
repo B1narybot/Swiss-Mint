@@ -1,1 +1,56 @@
-<p>footer works!</p>
+<footer class="footer">
+  <!-- Logo Section -->
+  <div class="footer-logo">
+    <h1>Swiss Mint</h1>
+  </div>
+
+  <!-- Newsletter Subscription Form -->
+  <div class="footer-newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form (submit)="onSubscribe()">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+
+  <!-- Navigation Links (3 rows of UL items) -->
+  <div class="footer-navigation">
+    <div class="nav-row">
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Collections</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-row">
+      <ul class="nav-list">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Lookbook</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="nav-row">
+      <ul class="nav-list">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Shipping</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Social Media Links -->
+  <div class="footer-social">
+    <h3>Follow Us</h3>
+    <div class="social-icons">
+      <a href="#" class="social-icon facebook">F</a>
+      <a href="#" class="social-icon twitter">T</a>
+      <a href="#" class="social-icon instagram">I</a>
+      <a href="#" class="social-icon linkedin">L</a>
+    </div>
+  </div>
+</footer>
