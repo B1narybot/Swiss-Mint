@@ -1,6 +1,6 @@
 <div class="Nv-container">
     <div class="Nv-header">
-        <h1>SwissMint</h1>
+      <a routerLink="/" routerLinkActive="active"><h1>SwissMint</h1></a>
     </div>
     <div class="nav-right"> <!-- Added this div -->
         <div id="hamburger" class="hamburger">
@@ -10,13 +10,17 @@
         </div>
     </div>
     <ul id="navLinks" class="Nv-links">
-        <li>Catalog</li>
-        <li>Blog</li>
-        <li>Contact</li>
+        <li><a routerLink="/catelog" routerLinkActive="active">Catalog</a></li>
+        <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <!-- <li></li>
+        <li></li> -->
     </ul>
     <div>
+      <a routerLink="/cart" routerLinkActive="active">
         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="30" fill="#898988" class="bi bi-cart-fill" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
         </svg>
+      </a>
     </div>
 </div>
