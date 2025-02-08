@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'SwissMint';
-  
+
+  // Existing slides for the carousel
   slides = [
     {
       image: 'assets/homepage/street-wear.jpg',
@@ -33,14 +34,39 @@ export class AppComponent {
       paragraph: 'Urban wear brings together comfort and style for everyday use.'
     }
   ];
-  
+
   currentIndex = 0;
 
+  // New variables for the product slider
+  productSliderCurrentIndex = 0;
+  totalCards = 8;
+  visibleCards = 4;
+  cardWidth = 220; // width of each card + margin
+
+  // Methods for the existing slide carousel
   nextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
   }
 
   prevSlide(): void {
     this.currentIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
+  }
+
+  // Methods for the product slider
+  moveProductSliderLeft(): void {
+    if (this.productSliderCurrentIndex > 0) {
+      this.productSliderCurrentIndex--;
+    }
+  }
+
+  moveProductSliderRight(): void {
+    if (this.productSliderCurrentIndex < this.totalCards - this.visibleCards) {
+      this.productSliderCurrentIndex++;
+    }
+  }
+
+  // Method to calculate the transform value for the product slider
+  getProductSliderTransform(): string {
+    return `translateX(-${this.productSliderCurrentIndex * this.cardWidth}px)`;
   }
 }
